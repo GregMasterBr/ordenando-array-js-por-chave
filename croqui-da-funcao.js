@@ -24,7 +24,7 @@ headers : [
             }
         ],
       data: [
-		{ "id": 1, "ordernum": "E34532", "product": "Sensor m8", "quantity": "50", "scrap": "0" },
+	{ "id": 1, "ordernum": "E34532", "product": "Sensor m8", "quantity": "50", "scrap": "0" },
         { "id": 2, "ordernum": "E34533", "product": "Sensor m12", "quantity": "150", "scrap": "0" },
         { "id": 3, "ordernum": "E34534", "product": "Sensor m10", "quantity": "20", "scrap": "0" },
         { "id": 4, "ordernum": "E34535", "product": "Sensor m6", "quantity": "250", "scrap": "0" },
@@ -50,7 +50,7 @@ headers : [
 let headers = dados.headers
 let data = dados.data
 
-/*Se você quiser usar o order dentro do cabeçalho*/
+/*Se você quiser usar a coluna ORDER dentro do cabeçalho e atribuir o número sequencial*/
 
 headers.sort(function(a, b) {return (a.Order - b.Order)});
 
@@ -58,7 +58,7 @@ let  so_os_cabecalhos = headers.map(function(el, i) {
   return [el.fieldName];
 })
 
-/*Caso queira só criar um array posicional*/
+/*Caso queira só criar um array posicional para ordenar os dados*/
 let so_os_cabecalhos = [["ordenum"],["scrap"],["product"],["id"],["quantity"]]
 
 
